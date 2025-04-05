@@ -1,0 +1,10 @@
+flask
+fastapi
+uvicorn
+pandas
+numpy
+tensorflow  # If AI/ML is involved
+scikit-learn
+sqlite3
+requests
+openai  # If AI chatbot is used
