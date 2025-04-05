@@ -1,0 +1,37 @@
+AI-based-Therapy-App/
+│── frontend/                 # Frontend (Next.js)
+│   ├── components/           # UI Components
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   ├── pages/                # Main Pages
+│   │   ├── index.js          # Home Page
+│   │   ├── login.js          # Login Page
+│   │   ├── register.js       # Register Page
+│   │   ├── dashboard.js      # Dashboard Page
+│   ├── styles/               # CSS/Styles
+│   │   ├── globals.css
+│   ├── utils/               # Static Files (Images, Icons)
+│   ├── tailwind.config.js    # Tailwind CSS Config
+│   ├── postcss.config.js     # PostCSS Config
+│   ├── next.config.js        # Next.js Config
+│   ├── package.json          # Node.js Dependencies
+│   ├── .gitignore
+|   ├──public/
+|       │── logo.png
+|       │── favicon.ico
+|       │── banner.jpg
+│── full_api_backend/          # Backend (FastAPI)
+│   ├── __init__.py
+│   ├── full_api_backend.py    # Main Backend API
+│   ├── auth.py                # Authentication
+│   ├── chatbot.py             # AI Chatbot Logic
+│   ├── database.py            # Database Setup
+│   ├── models.py              # SQLAlchemy Models
+│   ├── schemas.py             # Pydantic Schemas
+│   ├── requirements.txt       # Python Dependencies 
+|   |── .env                   # Environment Variables
+│── prisma/              # Prisma configurations
+│   ├── schema.prisma 
+├── .env                 
+│── .gitignore
+│── README.md

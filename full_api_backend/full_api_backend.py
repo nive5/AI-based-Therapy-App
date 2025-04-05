@@ -3,14 +3,26 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine, Base
+<<<<<<< HEAD
 import models  # Ensure models.py exists
 from full_api_backend import schemas
 
+=======
+import models
+import auth
+import chatbot
+
+import schemas
+>>>>>>> upstream/main
 from auth import get_current_user, create_access_token
 from chatbot import ai_chat_response
 from fastapi.middleware.cors import CORSMiddleware
 
 # Create FastAPI app
+<<<<<<< HEAD
+=======
+'''
+>>>>>>> upstream/main
 app = FastAPI()
 
 # CORS Middleware
@@ -63,6 +75,35 @@ def ai_chat(user_input: schemas.ChatRequest, current_user: schemas.User = Depend
 @app.get("/tracker/")
 def tracker(current_user: schemas.User = Depends(get_current_user)):
     return {"message": "Track your mental health progress"}
+<<<<<<< HEAD
 
 
 
+=======
+'''
+
+import openai
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load API key from .env file
+
+router = APIRouter()
+
+class ChatRequest(BaseModel):
+    message: str
+
+@router.post("/chat")
+async def chat_with_ai(request: ChatRequest):
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",  # Or "gpt-4" for better responses
+            messages=[{"role": "user", "content": request.message}],
+            temperature=0.7
+        )
+        return {"reply": response["choices"][0]["message"]["content"]}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+>>>>>>> upstream/main

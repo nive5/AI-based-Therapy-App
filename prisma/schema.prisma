@@ -1,0 +1,15 @@
+model TherapySession {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  date        DateTime @default(now())
+  notes       String?
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model Message {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  content    String
+  timestamp  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id])
+}

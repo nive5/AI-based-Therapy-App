@@ -5,5 +5,9 @@ pandas
 numpy
 tensorflow  # If AI/ML is involved
 scikit-learn
+<<<<<<< HEAD
+=======
+sqlite3
+>>>>>>> upstream/main
 requests
 openai  # If AI chatbot is used

@@ -27,3 +27,11 @@ AppData/
 node_modules/
 .env
 >>>>>>> 1df8924 (Initial commit)
+<<<<<<< HEAD
+=======
+
+__pycache__/
+node_modules/
+.env
+database.db
+>>>>>>> upstream/main
