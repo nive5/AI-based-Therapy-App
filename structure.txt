@@ -28,7 +28,10 @@ AI-based-Therapy-App/
 │   ├── database.py            # Database Setup
 │   ├── models.py              # SQLAlchemy Models
 │   ├── schemas.py             # Pydantic Schemas
-│   ├── requirements.txt       # Python Dependencies
-│   ├── .env                   # Environment Variables
+│   ├── requirements.txt       # Python Dependencies 
+|   |── .env                   # Environment Variables
+│── prisma/              # Prisma configurations
+│   ├── schema.prisma 
+├── .env                 
 │── .gitignore
 │── README.md
